@@ -1,8 +1,19 @@
+import { Link } from "remix";
+
 export default function Index() {
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
       <h1>Welcome to Remix</h1>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita
+        perferendis voluptate illum itaque sed inventore. Quidem magnam at
+        ducimus illum tenetur officiis earum? Eum esse omnis exercitationem
+        nulla qui nam?
+      </p>
       <ul>
+        <li>
+          <Link to="/new">New Page</Link>
+        </li>
         <li>
           <a
             target="_blank"

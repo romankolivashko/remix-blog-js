@@ -1,30 +1,22 @@
-import {
-  Links,
-  LiveReload,
-  Meta,
-  Outlet,
-  Scripts,
-  ScrollRestoration
-} from "remix";
+import { Outlet, LiveReload } from "remix";
 
-export function meta() {
-  return { title: "New Remix App" };
+export default function App(params) {
+  return (
+    <Document>
+      <Outlet />
+    </Document>
+  );
 }
 
-export default function App() {
+function Document({ children, title }) {
   return (
     <html lang="en">
       <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <Meta />
-        <Links />
+        <title>{title ? title : "Remix Blog"}</title>
       </head>
       <body>
-        <Outlet />
-        <ScrollRestoration />
-        <Scripts />
-        {process.env.NODE_ENV === "development" && <LiveReload />}
+        {children}
+        {process.env.NODE_ENV === "development" ? <LiveReload /> : null}
       </body>
     </html>
   );
