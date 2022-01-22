@@ -14,6 +14,6 @@ model Post {
   id        String   @id @default(uuid())
   title     String
   body      String
-  cretedAt  DateTime @default(now())
+  createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
