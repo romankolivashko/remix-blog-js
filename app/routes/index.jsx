@@ -1,43 +1,15 @@
-import { Link } from "remix";
-
-export default function Index() {
+function Home() {
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
-      <h1>Welcome to Remix</h1>
+    <div>
+      <h1>Welcome</h1>
       <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita
-        perferendis voluptate illum itaque sed inventore. Quidem magnam at
-        ducimus illum tenetur officiis earum? Eum esse omnis exercitationem
-        nulla qui nam?
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam
+        officia debitis, harum alias consequatur cupiditate molestias
+        praesentium? Inventore iure voluptatum, suscipit aliquid omnis ea
+        maiores nulla laboriosam, autem, et architecto?
       </p>
-      <ul>
-        <li>
-          <Link to="/new">New Page</Link>
-        </li>
-        <li>
-          <a
-            target="_blank"
-            href="https://remix.run/tutorials/blog"
-            rel="noreferrer"
-          >
-            15m Quickstart Blog Tutorial
-          </a>
-        </li>
-        <li>
-          <a
-            target="_blank"
-            href="https://remix.run/tutorials/jokes"
-            rel="noreferrer"
-          >
-            Deep Dive Jokes App Tutorial
-          </a>
-        </li>
-        <li>
-          <a target="_blank" href="https://remix.run/docs" rel="noreferrer">
-            Remix Docs
-          </a>
-        </li>
-      </ul>
     </div>
   );
 }
+
+export default Home;
