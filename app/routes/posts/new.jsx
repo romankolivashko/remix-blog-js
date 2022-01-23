@@ -14,6 +14,10 @@ function validateBody(body) {
   }
 }
 
+function badRequest(data) {
+  return json(data, { status: 400 });
+}
+
 export const action = async ({ request }) => {
   const form = await request.formData();
   const title = form.get("title");
@@ -28,7 +32,7 @@ export const action = async ({ request }) => {
 
   if (Object.values(fieldErrors).some(Boolean)) {
     console.log(fieldErrors);
-    return json({ fieldErrors, fields }, { status: 400 });
+    return badRequest({ fieldErrors, fields });
   }
 
   //submit to database
