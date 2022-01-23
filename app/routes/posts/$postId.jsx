@@ -27,7 +27,6 @@ export const action = async ({ request, params }) => {
 };
 
 function Post() {
-  const params = useParams();
   const { post } = useLoaderData();
 
   return (
