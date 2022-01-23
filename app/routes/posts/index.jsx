@@ -5,7 +5,7 @@ export const loader = async () => {
   const data = {
     posts: await db.post.findMany({
       take: 20,
-      select: { id: true, title: true, createdAt: true },
+      select: { id: true, title: true, createdAt: true, user: true },
       orderBy: { createdAt: "desc" },
     }),
   };
@@ -30,6 +30,7 @@ function PostItems() {
             <Link to={post.id}>
               <h3>{post.title}</h3>
               {new Date(post.createdAt).toLocaleString()}
+              <p>Created by {post.user.username}</p>
             </Link>
           </li>
         ))}
