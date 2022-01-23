@@ -24,7 +24,7 @@ function PostItems() {
           New Post
         </Link>
       </div>
-      <ul className="post-list">
+      <ul className="posts-list">
         {posts.map((post) => (
           <li key={post.id}>
             <Link to={post.id}>
